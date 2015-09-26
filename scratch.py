@@ -24,7 +24,7 @@ if len(audio_in) > MAX_LENGTH * fs:
 
 
 f, t, Sxx = signal.spectrogram(audio_in, fs, nperseg=100)
-plt.pcolormesh(np.log(t), f, Sxx)
+plt.pcolormesh(t, f, Sxx)
 plt.ylabel('Frequency [Hz]')
 plt.xlabel('Time [sec]')
 plt.show()
